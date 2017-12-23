@@ -4,4 +4,9 @@
   <artifactId>jeeSpring-parent</artifactId>
   <version>0.0.1-SNAPSHOT</version>
   <packaging>pom</packaging>
+  <!--项目属性定义  -->
+  <prerequisites>
+  		<!-- 主要版本设置 -->
+  		<spring.version></spring.version>
+  </prerequisites>
 </project>
