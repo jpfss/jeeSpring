@@ -22,6 +22,7 @@
 
 	<properties>
 		<!-- main setting -->
+
 		<!-- environment setting -->
 		<downloadSources>true</downloadSources>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -53,10 +54,15 @@
 
 	</properties>
 	<dependencies>
-		<!-- Spring Boot Web 依赖 -->
+        <!--支持 Web 应用开发，包含 Tomcat 和 spring-mvc-->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
+		</dependency>
+		<!--添加适用于生产环境的功能，如性能指标和监测等功能。 -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-actuator</artifactId>
 		</dependency>
 		<!-- mybatis-plus begin -->
 		<dependency>
@@ -70,16 +76,23 @@
 			<version>${mybatisplus.version}</version>
 		</dependency>
 		<!-- mybatis-plus end -->
-		<!-- Druid Begin-->
+        <!--Mysql / DataSource Begin-->
 		<dependency>
 			<groupId>com.alibaba</groupId>
 			<artifactId>druid</artifactId>
 			<version>${druid.version}</version>
 		</dependency>
+		<!--支持使用 JDBC 访问数据库-->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-jdbc</artifactId>
+		</dependency>
+		<!-- MYSQL -->
 		<dependency>
 			<groupId>mysql</groupId>
 			<artifactId>mysql-connector-java</artifactId>
 		</dependency>
+        <!--Mysql / DataSource End-->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-tomcat</artifactId>
