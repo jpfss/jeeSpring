@@ -11,6 +11,7 @@
 	<name>jeeSpring</name>
 	<description>jeeSpring致力于成为一个总结J2EE最佳开发实践的基础框架</description>
 
+	<!-- Spring Boot 启动父依赖 -->
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
@@ -52,6 +53,7 @@
 
 	</properties>
 	<dependencies>
+		<!-- Spring Boot Web 依赖 -->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
@@ -108,6 +110,13 @@
 			<version>${hutool-all.version}</version>
 		</dependency>
 		<!--Utils End-->
+		<!-- 热部署模块  Begin -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-devtools</artifactId>
+			<optional>true</optional> <!-- 这个需要为 true 热部署才有效 -->
+		</dependency>
+		<!-- 热部署模块  End -->
 	</dependencies>
 
 	<build>

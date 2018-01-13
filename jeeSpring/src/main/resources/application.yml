@@ -1,7 +1,12 @@
-##########################################################
-##################  ËùÓĞprofile¹²ÓĞµÄÅäÖÃ  #################
-##########################################################
-###################  springÅäÖÃ  ###################
+############################################################
+##################  æ‰€æœ‰profileå…±æœ‰çš„é…ç½®  #################
+############################################################
+
+
+###################  é¡¹ç›®å¯åŠ¨ç«¯å£  ###################
+server:
+  port: 8080
+###################  springé…ç½®  ###################
 spring:
   profiles:
     active: dev
@@ -13,28 +18,68 @@ spring:
     converters:
       preferred-json-mapper: fastjson
     multipart:
-      max-request-size: 100MB #×î´óÇëÇó´óĞ¡
-      max-file-size: 100MB #×î´óÎÄ¼ş´óĞ¡
+      max-request-size: 100MB #æœ€å¤§è¯·æ±‚å¤§å°
+      max-file-size: 100MB #æœ€å¤§æ–‡ä»¶å¤§å°
   devtools:
     restart:
-      enabled: false #ÊÇ·ñ¿ªÆô¿ª·¢Õß¹¤¾ß£¨true/false£©
+      enabled: false #æ˜¯å¦å¼€å¯å¼€å‘è€…å·¥å…·ï¼ˆtrue/falseï¼‰
       additional-paths: src/main/java
       exclude: static/**,WEB-INF/view/**
   aop:
-    proxy-target-class: true #falseÎªÆôÓÃjdkÄ¬ÈÏ¶¯Ì¬´úÀí,trueÎªcglib¶¯Ì¬´úÀí
+    proxy-target-class: true #falseä¸ºå¯ç”¨jdké»˜è®¤åŠ¨æ€ä»£ç†,trueä¸ºcglibåŠ¨æ€ä»£ç†
 
-  ###################  mybatis-plusÅäÖÃ  ###################
-  mybatis-plus:
-    mapper-locations: classpath*:com/jpfss/guns/**/mapping/*.xml
-    typeAliasesPackage: com.stylefeng.guns.common.persistence.model
-    global-config:
-      id-type: 0  #0:Êı¾İ¿âID×ÔÔö   1:ÓÃ»§ÊäÈëid  2:È«¾ÖÎ¨Ò»id(IdWorker)  3:È«¾ÖÎ¨Ò»ID(uuid)
-      db-column-underline: false
-      refresh-mapper: true
-    configuration:
-      map-underscore-to-camel-case: false
-      cache-enabled: true #ÅäÖÃµÄ»º´æµÄÈ«¾Ö¿ª¹Ø
-      lazyLoadingEnabled: true #ÑÓÊ±¼ÓÔØµÄ¿ª¹Ø
-      multipleResultSetsEnabled: true #¿ªÆôµÄ»°£¬ÑÓÊ±¼ÓÔØÒ»¸öÊôĞÔÊ±»á¼ÓÔØ¸Ã¶ÔÏóÈ«²¿ÊôĞÔ£¬·ñÔò°´Ğè¼ÓÔØÊôĞÔ
-  #    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl #´òÓ¡sqlÓï¾ä,µ÷ÊÔÓÃ
+###################  mybatis-plusé…ç½®  ###################
+mybatis-plus:
+  mapper-locations: classpath*:com/jpfss/**/mapping/*.xml
+  typeAliasesPackage: com.jpfss.common.persistence.model
+  global-config:
+    id-type: 0  #0:æ•°æ®åº“IDè‡ªå¢   1:ç”¨æˆ·è¾“å…¥id  2:å…¨å±€å”¯ä¸€id(IdWorker)  3:å…¨å±€å”¯ä¸€ID(uuid)
+    db-column-underline: false
+    refresh-mapper: true
+  configuration:
+    map-underscore-to-camel-case: false
+    cache-enabled: true #é…ç½®çš„ç¼“å­˜çš„å…¨å±€å¼€å…³
+    lazyLoadingEnabled: true #å»¶æ—¶åŠ è½½çš„å¼€å…³
+    multipleResultSetsEnabled: true #å¼€å¯çš„è¯ï¼Œå»¶æ—¶åŠ è½½ä¸€ä¸ªå±æ€§æ—¶ä¼šåŠ è½½è¯¥å¯¹è±¡å…¨éƒ¨å±æ€§ï¼Œå¦åˆ™æŒ‰éœ€åŠ è½½å±æ€§
+# log-impl: org.apache.ibatis.logging.stdout.StdOutImpl #æ‰“å°sqlè¯­å¥,è°ƒè¯•ç”¨
 
+---
+##########################################################
+###################  å¼€å‘ç¯å¢ƒçš„profile  ###################
+##########################################################
+spring:
+  profiles: dev
+   #æ•°æ®æºé…ç½®
+  datasource:
+    url: jdbc:mysql://localhost:3306/learn?useUnicode=true&characterEncoding=utf-8&useSSL=false
+    username: jpfss
+    password: jpfss
+    driver-class-name: com.mysql.jdbc.Driver
+    type: com.alibaba.druid.pool.DruidDataSource
+    connectionProperties: druid.stat.mergeSql=true
+---
+##########################################################
+###################  æµ‹è¯•ç¯å¢ƒçš„profile  ###################
+##########################################################
+spring:
+  profiles: test
+  datasource:
+    url: jdbc:mysql://localhost:3306/learn?useUnicode=true&characterEncoding=utf-8&useSSL=false
+    username: jpfss
+    password: jpfss
+    driver-class-name: com.mysql.jdbc.Driver
+    type: com.alibaba.druid.pool.DruidDataSource
+    connectionProperties: druid.stat.mergeSql=true
+---
+##########################################################
+###################  æ­£å¼ç¯å¢ƒçš„profile  ###################
+##########################################################
+spring:
+  profiles: prod
+  datasource:
+    url: jdbc:mysql://localhost:3306/learn?useUnicode=true&characterEncoding=utf-8&useSSL=false
+    username: jpfss
+    password: jpfss
+    driver-class-name: com.mysql.jdbc.Driver
+    type: com.alibaba.druid.pool.DruidDataSource
+    connectionProperties: druid.stat.mergeSql=true
