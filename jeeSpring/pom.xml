@@ -21,13 +21,11 @@
 	<properties>
 
 		<!-- main setting -->
-
 		<!-- environment setting -->
 		<downloadSources>true</downloadSources>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 		<java.version>1.8</java.version>
-
 		<!-- Data setting -->
 		<mybatisplus-spring-boot-starter.version>1.0.5</mybatisplus-spring-boot-starter.version>
 		<mybatisplus.version>2.1.7</mybatisplus.version>
@@ -48,6 +46,10 @@
 		<jsqlparser.version>0.9.1</jsqlparser.version>
 		<jedis.version>2.7.2</jedis.version>
 		<solrj.version>4.10.3</solrj.version>
+		<!--Utils Setting-->
+		<hutool-all.version>3.3.1</hutool-all.version>
+		<!--Test setting-->
+		<junit.version>4.12</junit.version>
 
 	</properties>
 	<dependencies>
@@ -87,6 +89,21 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-freemarker</artifactId>
 		</dependency>
+		<!--Test Begin-->
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>${junit.version}</version>
+			<scope>test</scope>
+		</dependency>
+		<!--Test End-->
+		<!--Utils Begin-->
+		<dependency>
+			<groupId>com.xiaoleilu</groupId>
+			<artifactId>hutool-all</artifactId>
+			<version>${hutool-all.version}</version>
+		</dependency>
+		<!--Utils End-->
 	</dependencies>
 
 	<build>

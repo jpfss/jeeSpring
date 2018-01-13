@@ -1,4 +1,4 @@
-package com.jpfss.common;
+package com.jpfss;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
