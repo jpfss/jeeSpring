@@ -13,7 +13,7 @@
 
 
     <!-- 生产环境. -->
-    <springProfile name="prod">
+    <springProfile name="pro">
         <logger name="org.springframework.web" level="ERROR"/>
         <logger name="org.springboot.sample" level="ERROR" />
         <logger name="com.kfit" level="ERROR" />
