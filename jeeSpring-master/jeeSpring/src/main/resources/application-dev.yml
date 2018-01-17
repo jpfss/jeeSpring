@@ -9,11 +9,11 @@ spring:
       write:  #数据源1
         username: jpfss
         password: jpfss
-        url: jdbc:mysql://mysqldb:3306/jeespring?useUnicode=true&characterEncoding=utf-8
+        url: jdbc:mysql://127.0.0.1:3306/jeespring?useUnicode=true&characterEncoding=utf-8
       read:  #数据源2
         username: jpfss
         password: jpfss
-        url: jdbc:mysql://mysqldb:3307/jeespring?useUnicode=true&characterEncoding=utf-8
+        url: jdbc:mysql://127.0.0.1:3307/jeespring?useUnicode=true&characterEncoding=utf-8
       type: com.alibaba.druid.pool.DruidDataSource   #这里是配置druid连接池，以下都是druid的配置信息
       filters: stat,wall,log4j
       maxActive: 20
