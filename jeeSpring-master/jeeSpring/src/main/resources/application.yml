@@ -61,5 +61,10 @@ mybatis-plus:
       cache-enabled: false
     #打印sql语句,调试用
     log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+  ###################  log配置 建议开发环境设置体制等级为TRACE或者debug ###################
+  logging:
+    level.root: debug
+    path: logs/
+    file: JeeSpringApplication.log
 
 

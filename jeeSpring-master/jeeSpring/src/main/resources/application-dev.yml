@@ -3,12 +3,17 @@
 ##########################################################
 spring:
   profiles: dev
-  #数据源配置
+  #数据源配置，没钱在一条win10上做了主从
   datasource:
       driver-class-name: com.mysql.jdbc.Driver
-      username: jpfss
-      password: jpfss
-      url: jdbc:mysql://mysqldb:3306/jeespring?useUnicode=true&characterEncoding=utf-8
+      write:  #数据源1
+        username: jpfss
+        password: jpfss
+        url: jdbc:mysql://mysqldb:3306/jeespring?useUnicode=true&characterEncoding=utf-8
+      read:  #数据源2
+        username: jpfss
+        password: jpfss
+        url: jdbc:mysql://mysqldb:3307/jeespring?useUnicode=true&characterEncoding=utf-8
       type: com.alibaba.druid.pool.DruidDataSource   #这里是配置druid连接池，以下都是druid的配置信息
       filters: stat,wall,log4j
       maxActive: 20
