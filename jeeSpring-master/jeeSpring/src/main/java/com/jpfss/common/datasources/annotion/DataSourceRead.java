@@ -1,6 +1,6 @@
-package com.jpfss.common.core.datasources.annotion;
+package com.jpfss.common.datasources.annotion;
 
-import com.jpfss.common.core.datasources.DataSourceTypeEnmu;
+import com.jpfss.common.datasources.DataSourceTypeEnmu;
 
 import java.lang.annotation.*;
 

@@ -1,9 +1,9 @@
-package com.jpfss.common.core.datasources.aspect;
+package com.jpfss.common.datasources.aspect;
 
-import com.jpfss.common.core.datasources.DataSourceContextHolder;
-import com.jpfss.common.core.datasources.DataSourceTypeEnmu;
-import com.jpfss.common.core.datasources.annotion.DataSourceRead;
-import com.jpfss.common.core.datasources.annotion.DataSourceWrite;
+import com.jpfss.common.datasources.DataSourceContextHolder;
+import com.jpfss.common.datasources.DataSourceTypeEnmu;
+import com.jpfss.common.datasources.annotion.DataSourceRead;
+import com.jpfss.common.datasources.annotion.DataSourceWrite;
 import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.annotation.Around;
 import org.aspectj.lang.annotation.Aspect;
@@ -18,7 +18,7 @@ import java.lang.reflect.Method;
 
 /**
  * @ProjectName: jeeSpring
- * @Package: com.jpfss.common.core.datasources.aspect
+ * @Package: com.jpfss.common.datasources.aspect
  * @ClassName: DynamicDataSourceAspect
  * @Description: AOP利用动态代理自动切换数据源
  * @Author: jpfss
@@ -35,7 +35,7 @@ public class DynamicDataSourceAspect implements Ordered {
     protected Logger logger = LoggerFactory.getLogger(getClass());
 
     /*拦截含有读数据源该注解的方法*/
-    @Pointcut("@annotation(com.jpfss.common.core.datasources.annotion.DataSourceRead)")
+    @Pointcut("@annotation(com.jpfss.common.datasources.annotion.DataSourceRead)")
     public void readMethodPointcut() {
     }
 
@@ -70,7 +70,7 @@ public class DynamicDataSourceAspect implements Ordered {
     }
 
     /*拦截含有xie数据源该注解的方法*/
-    @Pointcut("@annotation(com.jpfss.common.core.datasources.annotion.DataSourceWrite)")
+    @Pointcut("@annotation(com.jpfss.common.datasources.annotion.DataSourceWrite)")
     public void writeMethodPointcut() {
     }
 

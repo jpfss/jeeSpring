@@ -1,10 +1,10 @@
-package com.jpfss.common.core.datasources;
+package com.jpfss.common.datasources;
 
 import org.springframework.jdbc.datasource.lookup.AbstractRoutingDataSource;
 
 /**
  * @ProjectName: jeeSpring
- * @Package: com.jpfss.common.core.datasources
+ * @Package: com.jpfss.common.datasources
  * @ClassName: DynamicDataSource
  * @Description: 继承Spring的类查询数据源
  * @Author: jpfss

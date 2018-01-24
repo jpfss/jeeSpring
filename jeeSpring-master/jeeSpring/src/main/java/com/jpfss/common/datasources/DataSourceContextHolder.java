@@ -1,11 +1,11 @@
-package com.jpfss.common.core.datasources;
+package com.jpfss.common.datasources;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 /**
  * @ProjectName: jeeSpring
- * @Package: com.jpfss.common.core.datasources
+ * @Package: com.jpfss.common.datasources
  * @ClassName: DataSourceContextHolder
  * @Description: 切换数据源辅助类
  * @Author: jpfss
