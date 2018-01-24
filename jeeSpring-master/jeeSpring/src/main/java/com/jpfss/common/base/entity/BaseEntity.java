@@ -1,4 +1,4 @@
-package com.jpfss.base.entity;
+package com.jpfss.common.base.entity;
 
 import com.baomidou.mybatisplus.activerecord.Model;
 

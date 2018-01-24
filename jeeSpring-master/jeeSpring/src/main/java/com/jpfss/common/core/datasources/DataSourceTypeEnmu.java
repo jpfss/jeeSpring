@@ -1,8 +1,8 @@
-package com.jpfss.core.datasources;
+package com.jpfss.common.core.datasources;
 
 /**
  * @ProjectName: jeeSpring
- * @Package: com.jpfss.core.datasources
+ * @Package: com.jpfss.common.core.datasources
  * @ClassName: DataSourceTypeEnmu
  * @Description: 数据源类型枚举类
  * @Author: jpfss

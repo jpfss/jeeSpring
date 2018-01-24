@@ -1,4 +1,4 @@
-package com.jpfss.config;
+package com.jpfss.common.config;
 
 /**
  * @Package:${package_name}

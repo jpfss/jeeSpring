@@ -1,12 +1,12 @@
-package com.jpfss.core.datasources.annotion;
+package com.jpfss.common.core.datasources.annotion;
 
-import com.jpfss.core.datasources.DataSourceTypeEnmu;
+import com.jpfss.common.core.datasources.DataSourceTypeEnmu;
 
 import java.lang.annotation.*;
 
 /**
  * @ProjectName: jeeSpring
- * @Package: com.jpfss.core.datasources.annotion
+ * @Package: com.jpfss.common.core.datasources.annotion
  * @ClassName: DataSourceWrite
  * @Description:
  * @Author: jpfss
